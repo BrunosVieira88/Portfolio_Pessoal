@@ -11,7 +11,10 @@ class JogoController extends Controller
 
         $animais = [1,2,3,1,2,3];
         $aberto = ["fechado","fechado","fechado","fechado","fechado","fechado"];
-        return view('jogomemoria.jogomemoria',compact('animais','aberto'));
+        shuffle($animais);
+        $numeroDeAnimais = count($animais);
+        $animais_json = json_encode($animais);
+        return view('indexJogoDaMemoria',compact('animais','aberto',"numeroDeAnimais","animais_json"));
 
     }
 

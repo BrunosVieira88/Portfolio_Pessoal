@@ -1,4 +1,4 @@
 @extends('principal')
 @section('content')
-    @include('telainicial')
+    @include('jogomemoria.jogomemoria')
 @stop
